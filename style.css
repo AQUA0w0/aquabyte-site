@@ -1,29 +1,47 @@
 
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: white;
     text-align: center;
 }
 
-header {
+.navbar {
+    display: flex;
+    justify-content: space-between;
     background: #222;
-    color: white;
-    padding: 20px;
+    padding: 15px 20px;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+.navbar .logo {
+    font-size: 24px;
     font-weight: bold;
 }
 
-.hero {
-    padding: 50px;
-    background: #0073e6;
+.navbar nav a {
     color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #0073e6, #003366);
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 18px;
 }
 
 .btn {
@@ -34,9 +52,22 @@ nav a {
     border-radius: 5px;
 }
 
+.service-list, .plan-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.service, .plan {
+    width: 25%;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 footer {
     margin-top: 20px;
     padding: 20px;
     background: #222;
-    color: white;
 }
