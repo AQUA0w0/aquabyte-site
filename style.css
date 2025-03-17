@@ -21,6 +21,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000;
 }
 
 .navbar .logo {
@@ -58,8 +59,8 @@ body {
 }
 
 .hero p {
-    margin: 20px 0;
-    font-size: 20px;
+    margin-top: 10px;
+    font-size: 22px;
     max-width: 600px;
     margin: auto;
 }
@@ -73,6 +74,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     display: inline-block;
+    margin-top: 20px;
     transition: 0.3s;
 }
 
@@ -81,22 +83,23 @@ body {
     color: white;
 }
 
-.features {
+.features, .service-list, .plan-list, .faq, .rules, .contact {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
     gap: 20px;
-    padding: 80px;
 }
 
-.feature {
-    width: 30%;
+.feature, .service, .plan, .faq h2, .rules h2, .contact p {
+    width: 60%;
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 12px;
     transition: 0.3s;
 }
 
-.feature:hover {
+.feature:hover, .service:hover, .plan:hover, .faq h2:hover, .rules h2:hover, .contact p:hover {
     transform: scale(1.05);
 }
 
