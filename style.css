@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #121212;
+    background-color: #0a0a0a;
     color: white;
     text-align: center;
 }
@@ -15,59 +15,103 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    background: #222;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.9);
     padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .navbar .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #0073e6, #00c3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .navbar nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #00c3ff;
 }
 
 .hero {
-    padding: 80px 20px;
-    background: linear-gradient(to right, #0073e6, #003366);
+    padding: 150px 20px 80px;
+    background: linear-gradient(to right, #0073e6, #00c3ff);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: slideIn 1.5s ease-in-out;
 }
 
 .hero p {
     margin: 20px 0;
-    font-size: 18px;
+    font-size: 20px;
+    max-width: 600px;
+    margin: auto;
 }
 
 .btn {
     background: white;
     color: #0073e6;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-.service-list, .plan-list {
+.btn:hover {
+    background: #00c3ff;
+    color: white;
+}
+
+.features {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 50px;
+    padding: 80px;
 }
 
-.service, .plan {
-    width: 25%;
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
+.feature {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
 }
 
 footer {
     margin-top: 20px;
     padding: 20px;
-    background: #222;
+    background: #0a0a0a;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
